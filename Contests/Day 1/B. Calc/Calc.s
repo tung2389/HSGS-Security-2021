@@ -11,6 +11,7 @@ imul rcx, rdi
 imul rcx, rsi
 
 mov rax, rdi
+xor rdx, rdx
 idiv rsi
 mov rdx, rax
 
