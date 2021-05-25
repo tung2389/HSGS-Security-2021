@@ -1,0 +1,9 @@
+Let's start examining the file
+We see that edi (or rsi) is moved to rbp + var_44 and rsi is moved to var_50. According to the calling convetion of x64,
+we know that when we call main, rdi holds the first argument, which is argc and rsi holds the second argument, which is
+const char ** argv. Therefore, we can rename var_44 and var_50 to argc and argv, respectively.
+
+We see that the program checks if argc equals to 2 or not, which means
+We can see that the program compares [rbp+s2] with [rax] (or our password), therefore [rbp+s2] must be the correct password
+
+Now we just need to concatenate these strings together (in reversed), starting with var_8 to s2
